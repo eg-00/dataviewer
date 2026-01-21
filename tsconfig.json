@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "include": [
+      "env.d.ts",
+      "src/**/*",
+      "src/**/*.vue",
+      "src/**/*.json"
+    ],
+    "lib": ["ESNext"]
+  },
+  "exclude": ["node_modules", "dist"]
+}

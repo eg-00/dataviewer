@@ -35,6 +35,10 @@ const data: ZeltCollection = {
                 {
                     "name": "Baum K",
                     "count": 1
+                },
+                {
+                    "name": "Seitenstangen K ",
+                    "count": 8
                 }
             ]
         },
@@ -72,6 +76,10 @@ const data: ZeltCollection = {
                 {
                     "name":"Seitenstreifen langko",
                     "count":2
+                },
+                {
+                    "name": "Seitenstangen K",
+                    "count": 10
                 }
             ]
         },
@@ -97,6 +105,10 @@ const data: ZeltCollection = {
                 {
                     "name":"Baum J",
                     "count":1
+                },
+                {
+                    "name": "Seitenstangen J",
+                    "count": 12
                 }
             ]
         },
@@ -122,6 +134,10 @@ const data: ZeltCollection = {
                 {
                     "name":"Baum J",
                     "count":2
+                },
+                {
+                    "name": "Seitenstangen J",
+                    "count": 14
                 }
             ]
         }

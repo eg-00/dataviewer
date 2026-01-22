@@ -180,6 +180,39 @@ const data: ZeltCollection = {
                     "count": 8
                 }
             ]
+        },
+        {
+            "name":"Aula-Jurte",
+            "components": [
+                {
+                    "name":"Auladach",
+                    "count":2
+                },
+                {
+                    "name":"Heringe",
+                    "count":12
+                },
+                {
+                    "name":"Abspannseile J",
+                    "count":12
+                },
+                {
+                    "name":"Baum AJ",
+                    "count":2
+                },
+                {
+                    "name":"Baumverbinder AJ",
+                    "count":1
+                },
+                {
+                    "name": "Seitenstangen J",
+                    "count": 12
+                },
+                {
+                    "name": "Vierecksplane",
+                    "count": 12
+                }
+            ]
         }
     ]
 };

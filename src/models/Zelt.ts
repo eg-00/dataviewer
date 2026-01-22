@@ -1,5 +1,4 @@
 import {Bestandteil} from "@/models/Bestandteil";
-import {Component} from "vue";
 export interface Zelt {
     name: string;
     components?: Bestandteil[];
@@ -109,6 +108,10 @@ const data: ZeltCollection = {
                 {
                     "name": "Seitenstangen J",
                     "count": 12
+                },
+                {
+                    "name": "Vierecksplane",
+                    "count": 12
                 }
             ]
         },
@@ -138,6 +141,43 @@ const data: ZeltCollection = {
                 {
                     "name": "Seitenstangen J",
                     "count": 14
+                },
+                {
+                    "name": "Vierecksplane",
+                    "count": 14
+                }
+            ]
+        },
+        {
+            "name":"Hoch-Kothe",
+            "components": [
+                {
+                    "name":"Kotenplane",
+                    "count":4
+                },
+                {
+                    "name":"Kotenkreuz",
+                    "count":1
+                },
+                {
+                    "name":"Heringe",
+                    "count":8
+                },
+                {
+                    "name":"Abspannseile J",
+                    "count":8
+                },
+                {
+                    "name":"Baum HK",
+                    "count":1
+                },
+                {
+                    "name": "Seitenstangen J",
+                    "count": 8
+                },
+                {
+                    "name": "Vierecksplane",
+                    "count": 8
                 }
             ]
         }
@@ -146,7 +186,7 @@ const data: ZeltCollection = {
 
 // Function to get all Zelte names as a list
 export function getZelteNames(zelteData: ZeltCollection = data): string[] {
-    return data.Zelte.map(zelt => zelt.name);
+    return zelteData.Zelte.map(zelt => zelt.name);
 }
 
 export function getZelteWithoutComponents(zelteData: ZeltCollection = data): ZeltCollection {

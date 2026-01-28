@@ -20,7 +20,7 @@
               v-if="typeof row[header] === 'number'"
               type="number"
               v-model="row[header]"
-              @change="handleChange(row)"
+              @change="handleChange(ref(row))"
           />
           <span v-else>{{ row[header] }}</span>
             </span>
@@ -37,7 +37,8 @@
 <script setup lang="ts">
 //import { BTable } from 'bootstrap-vue'
 //Vue.component('b-table', BTable)
-import {computed} from "vue";
+import {computed, Ref, ref} from "vue";
+import {Zelt} from "@/models/Zelt";
 
 const props = defineProps({
   domainName:String, data:null});
@@ -53,7 +54,7 @@ function deleteElement(id:number){
   emit( 'deleteElement',id);
 }
 
-const handleChange = (row: number) => {
+const handleChange = (row: Ref<Zelt>) => {
   emit('updateRow', row);
 };
 

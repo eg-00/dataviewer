@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import type { Zelt, ComponentItem } from "./types"
+import {Zelt} from "@/models/Zelt";
+import {Bestandteil} from "@/models/Bestandteil";
+
 const props = defineProps(['data']);
 
 // --- state ---
@@ -11,7 +13,7 @@ const createEmptyZelt = (): Zelt => ({
   components: []
 })
 
-const createEmptyComponent = (): ComponentItem => ({
+const createEmptyComponent = (): Bestandteil => ({
   name: "",
   count: 1
 })

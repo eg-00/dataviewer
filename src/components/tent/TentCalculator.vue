@@ -2,7 +2,7 @@
 
 import TentInput from "@/components/tent/TentInput.vue";
 import DomainClassView from "@/components/DomainClassView.vue";
-import {computed, ComputedRef, ref} from "vue";
+import {computed, ComputedRef, Ref, ref} from "vue";
 import {
   getZelteNames,
   getZelteWithComponents,
@@ -33,9 +33,16 @@ addTent({ name: "Kote",count:1 });
 function deleteTent(name:string) {
   tents.value.Zelte = tents.value.Zelte.filter(e => e.name !== name)
 }
+function updateTent(newTent:Ref<Zelt>){
+    tents.value.Zelte.forEach(e => {
+      if (e.name === newTent.value.name) {
+        e.count = newTent.value.count;
+      }
+    });
+
+}
 function toggleConfig() {
   openConfig.value= !openConfig.value;
-
 }
 
 </script>
@@ -50,7 +57,7 @@ function toggleConfig() {
   </div>
 
   <tent-input @addTent="addTent" :tentTypes="tenttypes"/>
-  <DomainClassView domainName="Zelte" @deleteTent="deleteTent" :data="tentcounts"/>
+  <DomainClassView domainName="Zelte" @deleteTent="deleteTent" @update-row="updateTent" :data="tentcounts"/>
   <TentComponents :tentTypes="tenttypes" :data="tents"/>
 
 </template>

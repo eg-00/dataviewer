@@ -42,7 +42,6 @@ const handleNavClick = (index) => {
   padding: 12px 20px;
   color: white;
   text-decoration: none;
-  font-family: Arial, sans-serif;
   font-size: 16px;
   background: none;
   border: none;

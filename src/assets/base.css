@@ -1,86 +1,97 @@
-/* color palette from <https://github.com/vuejs/theme> */
-:root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-}
-
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   font-weight: normal;
+  font-family: Roboto, sans-serif;
 }
+:root {
+
+  /* Hex colors */
+  --color-primary-blue: #004287;
+  --color-secondary-blue: #c3d1e0;
+  --color-red: #e94653;
+  --color-yellow: #fecf16;
+  --color-blue: #00b0eb;
+  --color-brown: #603609;
+  --color-light-gray: #cdd1ca;
+  --color-green: #2ea028;
+  --color-white: #ffffff;
+  --color-black: #000;
+
+  --color-light-red: #f9c5c9;
+  --color-light-yellow: #fff3cc;
+  --color-light-blue: #cceff8;
+  --color-light-drown: #dccdbf;
+  --color-light-light-gray: #f0f1ef;
+  --color-light-green: #d5ecd4;
+}
+
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: var(--color-black);
+  background: var(--color-secondary-blue);
   transition:
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
   font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
     Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+ button {
+    /* Font and Text */
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-white);
+
+    /* Background and Border */
+    border: 2px solid var(--color-light-green); /* Border color */
+   background-color: var(--color-green);
+    border-radius: 8px;
+
+    /* Size and Spacing */
+    padding: 12px 24px;
+    margin: 10px;
+
+    /* Effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Hover Effect */
+  button:hover {
+    background-color: var(--color-green); /* Secondary color */
+    color: var(--color-black); /* Text color for contrast */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Active (Click) Effect */
+  button:active {
+    background-color: var(--color-light-green); /* Tertiary color */
+    border-color: var(--color-green); /* Border color */
+    color: var(--color-black);
+    transform: translateY(2px);
+  }
+
+  /* Optional: Disabled State */
+  button:disabled {
+    background-color: #dccdbf; /* Light neutral */
+    color: #603609;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto Slap", Roboto, sans-serif;
 }

@@ -39,7 +39,8 @@ const data: ZeltCollection = {
                     "name": "Seitenstangen K ",
                     "count": 8
                 }
-            ]
+            ],
+            "count": 0
         },
         {
             "name":"Lang-Kote",
@@ -80,7 +81,8 @@ const data: ZeltCollection = {
                     "name": "Seitenstangen K",
                     "count": 10
                 }
-            ]
+            ],
+            "count": 0
         },
         {
             "name":"Jurte",
@@ -113,7 +115,8 @@ const data: ZeltCollection = {
                     "name": "Vierecksplane",
                     "count": 12
                 }
-            ]
+            ],
+            "count": 0
         },
         {
             "name":"Theater-Jurte",
@@ -146,10 +149,11 @@ const data: ZeltCollection = {
                     "name": "Vierecksplane",
                     "count": 14
                 }
-            ]
+            ],
+            "count": 0
         },
         {
-            "name":"Hoch-Kothe",
+            "name":"Hoch-Kote",
             "components": [
                 {
                     "name":"Kotenplane",
@@ -179,7 +183,8 @@ const data: ZeltCollection = {
                     "name": "Vierecksplane",
                     "count": 8
                 }
-            ]
+            ],
+            "count": 0
         },
         {
             "name":"Aula-Jurte",
@@ -212,7 +217,8 @@ const data: ZeltCollection = {
                     "name": "Vierecksplane",
                     "count": 12
                 }
-            ]
+            ],
+            "count": 0
         }
     ]
 };
@@ -220,6 +226,10 @@ const data: ZeltCollection = {
 // Function to get all Zelte names as a list
 export function getZelteNames(zelteData: ZeltCollection = data): string[] {
     return zelteData.Zelte.map(zelt => zelt.name);
+}
+
+export function getZelteWithComponents(zelteData: ZeltCollection = data): ZeltCollection {
+    return zelteData;
 }
 
 export function getZelteWithoutComponents(zelteData: ZeltCollection = data): ZeltCollection {

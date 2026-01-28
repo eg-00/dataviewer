@@ -9,7 +9,7 @@
             {{ key }}
               </span>
           </th>
-          <th>löschen</th>
+<!--          <th>löschen</th>-->
         </tr>
       </thead>
       <tbody>
@@ -25,9 +25,9 @@
           <span v-else>{{ row[header] }}</span>
             </span>
         </td>
-        <td>
-          <button @click="deleteElement(row['id'])">Delete</button>
-        </td>
+<!--        <td>-->
+<!--          <button @click="deleteElement(row['id'])">Delete</button>-->
+<!--        </td>-->
       </tr>
       </tbody>
     </table>
@@ -60,18 +60,9 @@ const handleChange = (row: number) => {
 </script>
 
 <style scoped>
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin: 1em 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
 .styled-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;
   font-size: 0.9em;
   color: #333;
 }

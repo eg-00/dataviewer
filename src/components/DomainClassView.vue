@@ -62,7 +62,7 @@ const handleChange = (row: Ref<Zelt>) => {
 
 <style scoped>
 .styled-table {
-  width: 100%;
+  width: 1%;
   border-collapse: collapse;
   font-size: 0.9em;
   color: #333;
@@ -72,24 +72,24 @@ const handleChange = (row: Ref<Zelt>) => {
 .styled-table td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-green);
 }
 
 .styled-table thead {
-  background-color: #4CAF50;
+  background-color: var(--color-green);
   color: white;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background-color: var(--color-light-light-gray);
 }
 
 .styled-table tbody tr:nth-of-type(odd) {
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .styled-table tbody tr:hover {
-  background-color: #e9e9e9;
+  background-color: var(--color-secondary-blue);
   transition: background-color 0.2s ease;
 }
 
@@ -106,15 +106,5 @@ const handleChange = (row: Ref<Zelt>) => {
   text-align: center;
 }
 
-/* Optional: Responsive adjustments */
-@media screen and (max-width: 600px) {
-  .styled-table {
-    font-size: 0.8em;
-  }
-  .styled-table th,
-  .styled-table td {
-    padding: 8px 10px;
-  }
-}
 
 </style>

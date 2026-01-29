@@ -45,6 +45,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.deleteBtn{
+
+    border: var(--color-light-red); /* Border color */
+    background-color: var(--color-red);
+}
+.deleteBtn:hover {
+    color: var(--color-black); /* Text color for contrast */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.deleteBtn:active{
+    background-color: var(--color-light-red);
+    border-color: var(--color-red); /* Border color */
+    color: var(--color-black);
+    transform: translateY(2px);
+}
+.btnSmall{
+    font-size: 8px;
+    border-radius: 6px;
+    /* Size and Spacing */
+    padding: 4px 8px;
+    margin: 1px;
+    border: 2px solid var(--color-light-green);
+}
  button {
     /* Font and Text */
     font-size: 16px;
@@ -71,7 +94,6 @@ body {
 
   /* Hover Effect */
   button:hover {
-    background-color: var(--color-green); /* Secondary color */
     color: var(--color-black); /* Text color for contrast */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }

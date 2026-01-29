@@ -10,7 +10,8 @@ const config = props.data
 // --- helpers ---
 const createEmptyZelt = (): Zelt => ({
   name: "",
-  components: []
+  components: [],
+  count: 0
 })
 
 const createEmptyComponent = (): Bestandteil => ({
@@ -50,6 +51,10 @@ const removeComponent = (zelt: Zelt, index: number) => {
         <input v-model="zelt.name" />
       </label>
 
+      <button class="deleteBtn btnSmall" @click="removeZelt(zeltIndex)">
+        Zelt entfernen
+      </button>
+
       <h4>Komponenten</h4>
 
       <div
@@ -68,19 +73,13 @@ const removeComponent = (zelt: Zelt, index: number) => {
             style="width: 60px"
         />
 
-        <button @click="removeComponent(zelt, compIndex)">
-          ✕
+        <button class="deleteBtn btnSmall" @click="removeComponent(zelt, compIndex)">
+          X
         </button>
       </div>
 
       <button @click="addComponent(zelt)">
         + Komponente
-      </button>
-
-      <br /><br />
-
-      <button @click="removeZelt(zeltIndex)">
-        Zelt entfernen
       </button>
     </div>
 
@@ -92,12 +91,11 @@ const removeComponent = (zelt: Zelt, index: number) => {
         <strong>{{ zelt.name }}</strong>
         <ul>
           <li v-for="c in zelt.components" :key="c.name">
-            {{ c.name }} × {{ c.count }}
+            {{ c.count }} × {{ c.name }}
           </li>
         </ul>
       </div>
     </div>
-    <pre>{{ config }}</pre>
   </div>
 </template>
 <style scoped>
@@ -108,4 +106,5 @@ const removeComponent = (zelt: Zelt, index: number) => {
   background: #c3d1e0;
 
 }
+
 </style>
